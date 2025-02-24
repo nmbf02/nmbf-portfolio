@@ -2,20 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Configuración de colores en modo claro (por defecto) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 255, 255, 255; /* Blanco */
+  --foreground: 23, 23, 23; /* Negro oscuro */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Configuración de colores en modo oscuro */
+.dark {
+  --background: 10, 10, 10; /* Negro */
+  --foreground: 237, 237, 237; /* Blanco grisáceo */
 }
 
+/* Aplicar colores dinámicos */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-[rgb(var(--background))] text-[rgb(var(--foreground))] font-sans;
 }
