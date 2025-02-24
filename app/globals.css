@@ -2,19 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Configuración de colores en modo claro (por defecto) */
+/* Setting colors in light mode (default) */
 :root {
-  --background: 255, 255, 255; /* Blanco */
-  --foreground: 23, 23, 23; /* Negro oscuro */
+  --background: 255, 255, 255; /* White */
+  --foreground: 23, 23, 23; /* Black */
 }
 
-/* Configuración de colores en modo oscuro */
+/* Dark mode color settings */
 .dark {
-  --background: 10, 10, 10; /* Negro */
-  --foreground: 237, 237, 237; /* Blanco grisáceo */
+  --background: 10, 10, 10; /* Black */
+  --foreground: 237, 237, 237; /* Greyish white */
 }
 
-/* Aplicar colores dinámicos */
+/* Apply dynamic colors */
 body {
   @apply bg-[rgb(var(--background))] text-[rgb(var(--foreground))] font-sans;
 }

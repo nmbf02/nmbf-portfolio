@@ -18,7 +18,7 @@ export default function Navbar() {
             <div className="container mx-auto flex justify-between items-center p-4">
 
                 {/* LOGO */}
-                <h1 className="text-xl font-bold">NathalyDev</h1>
+                <h1 className="text-xl font-bold">Hi! I'm Nath! ✨</h1>
 
                 {/* MENÚ - DESKTOP */}
                 <ul className="hidden md:flex space-x-6">
