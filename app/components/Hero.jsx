@@ -61,7 +61,7 @@ export default function Hero() {
                         <a href="https://twitter.com" target="_blank" className="hover:text-gray-400">
                             <FaTwitter size={35} />
                         </a>
-                        <a href="https://instagram.com" target="_blank" className="hover:text-gray-400">
+                        <a href="https://www.instagram.com/nmbf02?igsh=MXJ0b2FkZmRjNGp2cw==" target="_blank" className="hover:text-gray-400">
                             <FaInstagram size={35} />
                         </a>
                     </motion.div>
