@@ -58,7 +58,7 @@ export default function Hero() {
                         <a href="https://www.linkedin.com/in/nathalyberroa/" target="_blank" className="hover:text-gray-400">
                             <FaLinkedin size={35} />
                         </a>
-                        <a href="https://twitter.com" target="_blank" className="hover:text-gray-400">
+                        <a href="https://x.com/nmbf02" target="_blank" className="hover:text-gray-400">
                             <FaTwitter size={35} />
                         </a>
                         <a href="https://www.instagram.com/nmbf02?igsh=MXJ0b2FkZmRjNGp2cw==" target="_blank" className="hover:text-gray-400">
@@ -111,7 +111,7 @@ export default function Hero() {
                         <Image src="/icons/html5.svg" alt="HTML5" width={50} height={50} />
                         <Image src="/icons/css3.svg" alt="CSS3" width={50} height={50} />
                         <Image src="/icons/react.svg" alt="React" width={50} height={50} />
-                        <Image src="/icons/nodejs.svg" alt="Node.js" width={50} height={50} />
+                        <Image src="/icons/php.svg" alt="PHP" width={50} height={50} />
                     </div>
 
                 </div>
