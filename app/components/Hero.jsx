@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import Statistics from "@/app/components/Statistics";
 
 export default function Hero() {
     const { theme, systemTheme } = useTheme();
@@ -91,19 +92,7 @@ export default function Hero() {
                 <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-8">
 
                     {/* Estadísticas - Alineadas con el texto principal */}
-                    <div className="flex space-x-16 pl-0 md:pl-0">
-                        {/* Bloque 1 */}
-                        <div className="flex items-center text-xl">
-                            <span className="text-5xl font-bold text-purple-500">2</span>
-                            <p className="ml-3 text-gray-400">Years of Experience</p>
-                        </div>
-
-                        {/* Bloque 2 */}
-                        <div className="flex items-center text-xl">
-                            <span className="text-5xl font-bold text-purple-500">9</span>
-                            <p className="ml-3 text-gray-400">Projects Completed</p>
-                        </div>
-                    </div>
+                    <Statistics />
 
                     {/* Logos de tecnologías */}
                     <div className="flex space-x-8 ml-auto">
