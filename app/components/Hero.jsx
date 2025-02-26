@@ -31,14 +31,14 @@ export default function Hero() {
 
                 {/* Texto principal */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
+                    initial={{opacity: 0, y: 20}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 0.8}}
                     className="md:w-1/2"
                 >
                     <h1 className="text-6xl font-extrabold leading-tight md:text-7xl">
                         <span className={currentTheme === "dark" ? "text-white" : "text-black"}>Hello</span> 👋,
-                        <br />
+                        <br/>
                         <span className="text-purple-500">I'm a Developer</span>
                     </h1>
 
@@ -48,43 +48,45 @@ export default function Hero() {
 
                     {/* Redes Sociales */}
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, delay: 0.2 }}
+                        initial={{opacity: 0, y: 20}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 1, delay: 0.2}}
                         className="mt-6 flex space-x-4"
                     >
                         <a href="https://github.com/nmbf02" target="_blank" className="hover:text-gray-400">
-                            <FaGithub size={35} />
+                            <FaGithub size={35}/>
                         </a>
-                        <a href="https://www.linkedin.com/in/nathalyberroa/" target="_blank" className="hover:text-gray-400">
-                            <FaLinkedin size={35} />
+                        <a href="https://www.linkedin.com/in/nathalyberroa/" target="_blank"
+                           className="hover:text-gray-400">
+                            <FaLinkedin size={35}/>
                         </a>
                         <a href="https://x.com/nmbf02" target="_blank" className="hover:text-gray-400">
-                            <FaTwitter size={35} />
+                            <FaTwitter size={35}/>
                         </a>
-                        <a href="https://www.instagram.com/nmbf02?igsh=MXJ0b2FkZmRjNGp2cw==" target="_blank" className="hover:text-gray-400">
-                            <FaInstagram size={35} />
+                        <a href="https://www.instagram.com/nmbf02?igsh=MXJ0b2FkZmRjNGp2cw==" target="_blank"
+                           className="hover:text-gray-400">
+                            <FaInstagram size={35}/>
                         </a>
                     </motion.div>
                 </motion.div>
 
                 {/* Imagen de fondo */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8 }}
+                    initial={{opacity: 0, scale: 0.8}}
+                    animate={{opacity: 1, scale: 1}}
+                    transition={{duration: 0.8}}
                     className="hidden md:block md:w-1/2"
                 >
-                    <Image src="/images/hero-image.png" alt="Hero Image" width={500} height={500} />
+                    <Image src="/images/hero-image.png" alt="Hero Image" width={450} height={450}/>
                 </motion.div>
 
             </div>
 
             {/* Sección inferior con estadísticas y tecnologías */}
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.4 }}
+                initial={{opacity: 0, y: 20}}
+                animate={{opacity: 1, y: 0}}
+                transition={{duration: 1, delay: 0.4}}
                 className={`absolute bottom-0 left-0 w-full py-6 transition-all duration-300 ${
                     currentTheme === "dark" ? "bg-[#1E1E1E]" : "bg-gray-200"
                 }`}
