@@ -4,7 +4,9 @@ import Navbar from "@/app/components/Navbar";
 import Hero from "@/app/components/Hero";
 import About from "@/app/components/About";
 import Skills from "@/app/components/Skills";
+import Projects from "@/app/components/Projects";
 import Contact from "@/app/components/Contact";
+import Footer from "@/app/components/Footer";
 import Providers from "./providers";
 
 const geistSans = Geist({
@@ -19,7 +21,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
     title: "Nathaly Berroa | Portfolio",
-    description: "Portfolio built with Next.js and Tailwind CSS",
+    description: "Full Stack Developer crafting dynamic, scalable, and user-friendly web solutions using Next.js, Tailwind CSS, and modern technologies.",
 };
 
 export default function RootLayout({ children }) {
@@ -31,7 +33,9 @@ export default function RootLayout({ children }) {
             <Hero />
             <About />
             <Skills />
+            <Projects />
             <Contact />
+            <Footer />
             <main className="container mx-auto px-4">{children}</main>
         </Providers>
         </body>

@@ -22,10 +22,10 @@ export default function Navbar() {
 
                 {/* MENÚ - DESKTOP */}
                 <ul className="hidden md:flex space-x-6">
-                    <li><Link href="#about" className="hover:text-gray-400">About</Link></li>
-                    <li><Link href="#skills" className="hover:text-gray-400">Skills</Link></li>
-                    <li><Link href="#projects" className="hover:text-gray-400">Projects</Link></li>
-                    <li><Link href="#contact" className="hover:text-gray-400">Contact</Link></li>
+                    <li><Link href="#About" className="hover:text-gray-400">About</Link></li>
+                    <li><Link href="#Skills" className="hover:text-gray-400">Skills</Link></li>
+                    <li><Link href="#Projects" className="hover:text-gray-400">Projects</Link></li>
+                    <li><Link href="#Contact" className="hover:text-gray-400">Contact</Link></li>
                 </ul>
 
                 {/* THEME TOGGLE */}
