@@ -20,9 +20,12 @@ export default function Skills() {
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
 
                 {/* Gráfica SVG a la izquierda */}
-                <div className="w-full md:w-1/2 flex justify-center">
-                    <svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 150 L50 120 L90 140 L130 100 L170 130 L210 80 L250 110 L290 50" stroke="white" strokeWidth="2" fill="none"/>
+                <div className="hidden md:block md:w-1/2 relative mt-10 md:mt-0">
+                    <svg width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 350 L100 300 L200 320 L300 250 L400 290 L500 200"
+                              stroke="white"
+                              strokeWidth="3"
+                              fill="none" />
                     </svg>
                 </div>
 

@@ -8,21 +8,45 @@ export default function Navbar() {
     const { theme, setTheme, resolvedTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const [isTransparent, setIsTransparent] = useState(true);
 
     useEffect(() => {
         setMounted(true);
+        const handleScroll = () => {
+            const sections = ["About", "Skills", "Projects", "Contact"];
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+            const isInSection = sections.some((section) => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const { top, bottom } = element.getBoundingClientRect();
+                    return top <= window.innerHeight / 2 && bottom >= window.innerHeight / 2;
+                }
+                return false;
+            });
+
+            setIsTransparent(isInSection);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
-        <nav className="fixed top-0 w-full z-50 border-b border-gray-700/20 shadow-md bg-[rgb(var(--background))] text-[rgb(var(--foreground))] transition-colors duration-300">
+        <nav
+            className={`fixed top-0 w-full z-50 border-b border-gray-700/20 shadow-md transition-colors duration-300 ${
+                isTransparent ? "bg-transparent" : "bg-[rgb(var(--background))]"
+            } text-[rgb(var(--foreground))]`}
+        >
             <div className="container mx-auto flex justify-between items-center p-4">
 
                 {/* LOGO */}
-                <h1 className="text-xl font-bold">Hi! I'm Nath! ✨</h1>
+                <h1 className="text-xl font-bold cursor-pointer" onClick={() => window.location.reload()}>Hi! I'm Nath!
+                    ✨</h1>
 
                 {/* MENÚ - DESKTOP */}
                 <ul className="hidden md:flex space-x-6">
-                    <li><Link href="#About" className="hover:text-gray-400">About</Link></li>
+                <li><Link href="#About" className="hover:text-gray-400">About</Link></li>
                     <li><Link href="#Skills" className="hover:text-gray-400">Skills</Link></li>
                     <li><Link href="#Projects" className="hover:text-gray-400">Projects</Link></li>
                     <li><Link href="#Contact" className="hover:text-gray-400">Contact</Link></li>
@@ -34,23 +58,18 @@ export default function Navbar() {
                         <div className="w-10 h-10" />
                     ) : (
                         <>
-                            {/* Modo Sistema */}
                             <button
                                 className={`p-2 rounded-full transition ${resolvedTheme === "system" ? "bg-gray-700" : ""}`}
                                 onClick={() => setTheme("system")}
                             >
                                 <ComputerDesktopIcon className="h-5 w-5 text-gray-400" />
                             </button>
-
-                            {/* Modo Claro */}
                             <button
                                 className={`p-2 rounded-full transition ${resolvedTheme === "light" ? "bg-gray-700" : ""}`}
                                 onClick={() => setTheme("light")}
                             >
                                 <SunIcon className="h-5 w-5 text-yellow-400" />
                             </button>
-
-                            {/* Modo Oscuro */}
                             <button
                                 className={`p-2 rounded-full transition ${resolvedTheme === "dark" ? "bg-gray-700" : ""}`}
                                 onClick={() => setTheme("dark")}
@@ -61,19 +80,17 @@ export default function Navbar() {
                     )}
                 </div>
 
-                {/* MENÚ MÓVIL */}
                 <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
                     ☰
                 </button>
             </div>
 
-            {/* MENÚ MÓVIL DESPLEGABLE */}
             {isOpen && (
                 <div className="md:hidden bg-[rgb(var(--background))] border-t border-gray-700/20 py-4 absolute top-full left-0 w-full flex flex-col items-center">
-                    <Link href="#about" className="block py-2 hover:text-gray-400">About</Link>
-                    <Link href="#skills" className="block py-2 hover:text-gray-400">Skills</Link>
-                    <Link href="#projects" className="block py-2 hover:text-gray-400">Projects</Link>
-                    <Link href="#contact" className="block py-2 hover:text-gray-400">Contact</Link>
+                    <Link href="#About" className="block py-2 hover:text-gray-400">About</Link>
+                    <Link href="#Skills" className="block py-2 hover:text-gray-400">Skills</Link>
+                    <Link href="#Projects" className="block py-2 hover:text-gray-400">Projects</Link>
+                    <Link href="#Contact" className="block py-2 hover:text-gray-400">Contact</Link>
                 </div>
             )}
         </nav>

@@ -21,8 +21,8 @@ export default function About() {
                 </motion.div>
 
                 {/* Gráfica en SVG */}
-                <div className="md:w-1/2 relative mt-10 md:mt-0">
-                    <motion.svg
+                <div className="hidden md:block md:w-1/2 relative mt-10 md:mt-0">
+                <motion.svg
                         initial={{ pathLength: 0 }}
                         animate={{ pathLength: 1 }}
                         transition={{ duration: 2, ease: "easeInOut" }}
