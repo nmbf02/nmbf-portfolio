@@ -10,34 +10,38 @@ import "swiper/css/navigation";
 
 const projects = [
     {
-        title: "UIX Portfolio Website",
-        description: "Website Landing page for a UI/UX Designer Portfolio",
-        image: "/projects/uix-portfolio.png",
-        codeLink: "https://github.com/nmbf02/uix-portfolio",
+        title: "SOFTWARE-WEB-MIRAGE",
+        description: "Web-based dealership system for managing car sales, rentals, and vehicle auctions efficiently and seamlessly.",
+        image: "/projects/software-web-mirage.png",
+        codeLink: "https://github.com/nmbf02/SOFTWARE-WEB-MIRAGE",
     },
+
     {
-        title: "LOZAN Ecommerce Web",
-        description: "Ecommerce website for fashion that sells Arabic abaya",
-        image: "/projects/lozan-ecommerce.png",
-        codeLink: "https://github.com/nmbf02/lozan-ecommerce",
+        title: "RoomLogic-HotelManagement",
+        description: "Modern hotel management platform offering booking automation, room management, data analytics, and an intuitive user experience.",
+        image: "/projects/roomlogic-hotelmanagement.png",
+        codeLink: "https://github.com/nmbf02/RoomLogic-HotelManagement",
     },
+
     {
-        title: "HOMEY Furniture App",
-        description: "Luxury Furniture app for selling furniture and home decorations",
-        image: "/projects/homey-furniture.png",
-        codeLink: "https://github.com/nmbf02/homey-furniture",
+        title: "RoomLogic (Android App)",
+        description: "Android hotel management app with MVVM, Rust-based REST API, push notifications, and dockerized backend on Digital Ocean.",
+        image: "/projects/roomlogic.png",
+        codeLink: "https://github.com/nmbf02/RoomLogic",
     },
+
     {
-        title: "CARENT Rental Website",
-        description: "Website for renting and selling cars with filters and car catalogs",
-        image: "/projects/carent-rental.png",
-        codeLink: "https://github.com/nmbf02/carent-rental",
+        title: "Podman Load Balancer",
+        description: "Project using Podman to run PHP, Java, and Node.js with an Nginx load balancer. Ideal for optimizing scalability and performance.",
+        image: "/projects/podman-load-balancer.png",
+        codeLink: "https://github.com/nmbf02/Podman-Balanceador-de-Carga",
     },
+
     {
-        title: "BurgerZing Food Website",
-        description: "Restaurant website menu for ordering food",
-        image: "/projects/burgerzing-food.png",
-        codeLink: "https://github.com/nmbf02/burgerzing-food",
+        title: "Dominguez Auto Painting Website",
+        description: "Professional and responsive website development for a painting and maintenance company, showcasing services effectively.",
+        image: "/projects/dominguez-auto-pintura.png",
+        codeLink: "https://github.com/nmbf02/Dom-nguezAPintura-Web",
     },
 ];
 
