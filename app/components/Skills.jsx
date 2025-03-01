@@ -16,7 +16,7 @@ const topSkills = [
 
 export default function Skills() {
     return (
-        <section className="relative py-20 px-8 bg-gray-100 dark:bg-black">
+        <section id="Skills" className="relative py-20 px-8 bg-gray-100 dark:bg-black">
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
 
                 {/* Gráfica SVG a la izquierda */}

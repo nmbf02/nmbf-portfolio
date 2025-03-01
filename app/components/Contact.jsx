@@ -57,7 +57,7 @@ export default function Contact() {
     };
 
     return (
-        <section className="py-16 px-8 bg-purple-100 dark:bg-black text-black dark:text-white">
+        <section id="Contact" className="py-16 px-8 bg-purple-100 dark:bg-black text-black dark:text-white">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-start">
 
                 {/* Texto y opciones de proyecto */}

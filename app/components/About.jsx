@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
     return (
-        <section className="relative w-full py-20 px-8 bg-gray-100 dark:bg-black">
+        <section id="About" className="relative w-full py-20 px-8 bg-gray-100 dark:bg-black">
             <div className="container mx-auto flex flex-col md:flex-row items-center">
                 {/* Texto del About */}
                 <motion.div
