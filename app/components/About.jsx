@@ -8,8 +8,9 @@ export default function About() {
                 {/* Texto del About */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
+                    viewport={{ once: false, amount: 0.5 }}
                     className="md:w-1/2 text-left"
                 >
                     <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -21,11 +22,14 @@ export default function About() {
                 </motion.div>
 
                 {/* Gráfica en SVG */}
-                <div className="hidden md:block md:w-1/2 relative mt-10 md:mt-0">
-                <motion.svg
-                        initial={{ pathLength: 0 }}
-                        animate={{ pathLength: 1 }}
-                        transition={{ duration: 2, ease: "easeInOut" }}
+                <motion.div
+                    className="hidden md:block md:w-1/2 relative mt-10 md:mt-0"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1.2 }}
+                    viewport={{ once: false, amount: 0.5 }}
+                >
+                    <svg
                         className="w-full h-48"
                         viewBox="0 0 500 200"
                         fill="none"
@@ -38,8 +42,8 @@ export default function About() {
                             strokeLinecap="round"
                             className="dark:stroke-white"
                         />
-                    </motion.svg>
-                </div>
+                    </svg>
+                </motion.div>
             </div>
         </section>
     );
