@@ -39,11 +39,11 @@ export default function Hero() {
                     <h1 className="text-6xl font-extrabold leading-tight md:text-7xl">
                         <span className={currentTheme === "dark" ? "text-white" : "text-black"}>Hello</span> 👋,
                         <br/>
-                        <span className="text-purple-500">I'm a Developer</span>
+                        <span className="text-purple-500">I'm Nathaly Berroa</span>
                     </h1>
 
                     <p className="mt-4 text-xl text-gray-400">
-                        I build things for the web and app
+                        Web & App Developer | Crafting clean and functional designs
                     </p>
 
                     {/* Redes Sociales */}
@@ -71,14 +71,14 @@ export default function Hero() {
                 </motion.div>
 
                 {/* Imagen de fondo */}
-                <motion.div
-                    initial={{opacity: 0, scale: 0.8}}
-                    animate={{opacity: 1, scale: 1}}
-                    transition={{duration: 0.8}}
-                    className="hidden md:block md:w-1/2"
-                >
-                    <Image src="/images/hero-image.png" alt="Hero Image" width={450} height={450}/>
-                </motion.div>
+                {/*<motion.div*/}
+                {/*    initial={{opacity: 0, scale: 0.8}}*/}
+                {/*    animate={{opacity: 1, scale: 1}}*/}
+                {/*    transition={{duration: 0.8}}*/}
+                {/*    className="hidden md:block md:w-1/2"*/}
+                {/*>*/}
+                {/*    <Image src="/images/hero-image.png" alt="Hero Image" width={450} height={450}/>*/}
+                {/*</motion.div>*/}
 
             </div>
 
