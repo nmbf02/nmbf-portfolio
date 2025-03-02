@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { SunIcon, MoonIcon, ComputerDesktopIcon } from "@heroicons/react/24/solid";
@@ -9,6 +9,7 @@ export default function Navbar() {
     const [mounted, setMounted] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [isTransparent, setIsTransparent] = useState(true);
+    const menuRef = useRef(null);
 
     useEffect(() => {
         setMounted(true);
@@ -28,8 +29,18 @@ export default function Navbar() {
             setIsTransparent(isInSection);
         };
 
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
     }, []);
 
     return (
@@ -46,7 +57,7 @@ export default function Navbar() {
 
                 {/* MENÚ - DESKTOP */}
                 <ul className="hidden md:flex space-x-6">
-                <li><Link href="#About" className="hover:text-gray-400">About</Link></li>
+                    <li><Link href="#About" className="hover:text-gray-400">About</Link></li>
                     <li><Link href="#Skills" className="hover:text-gray-400">Skills</Link></li>
                     <li><Link href="#Projects" className="hover:text-gray-400">Projects</Link></li>
                     <li><Link href="#Contact" className="hover:text-gray-400">Contact</Link></li>
@@ -86,7 +97,10 @@ export default function Navbar() {
             </div>
 
             {isOpen && (
-                <div className="md:hidden bg-[rgb(var(--background))] border-t border-gray-700/20 py-4 absolute top-full left-0 w-full flex flex-col items-center">
+                <div
+                    ref={menuRef}
+                    className="md:hidden bg-black/50 backdrop-blur-lg border-t border-gray-700/20 py-4 absolute top-full left-0 w-full flex flex-col items-center"
+                >
                     <Link href="#About" className="block py-2 hover:text-gray-400">About</Link>
                     <Link href="#Skills" className="block py-2 hover:text-gray-400">Skills</Link>
                     <Link href="#Projects" className="block py-2 hover:text-gray-400">Projects</Link>
