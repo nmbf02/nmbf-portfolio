@@ -15,7 +15,7 @@ const Statistics = () => {
             {/* Bloque 2 */}
             <div className="flex items-center text-xl">
         <span className="text-5xl font-bold text-purple-500">
-          <CountUp start={0} end={10} duration={3} />
+          <CountUp start={0} end={13} duration={3} />
         </span>
                 <p className="ml-3 text-gray-400">Projects Completed</p>
             </div>
