@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola",
+    "name": "Soy Nathaly Berroa",
+    "title": "Desarrolladora Web y Apps | Creando diseños limpios y funcionales"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "description": "Como desarrolladora, mi enfoque está en crear experiencias digitales funcionales e intuitivas. Me especializo en diseñar y desarrollar interfaces interactivas, asegurando que cada plataforma sea accesible, atractiva y fácil de usar. Siempre busco mejorar la experiencia del usuario a través de soluciones optimizadas adaptadas a diversas necesidades en entornos web."
+  },
+  "skills": {
+    "title": "Mis Habilidades",
+    "subtitle": "Tecnologías con las que he estado trabajando recientemente"
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "subtitle": "Algunas cosas que he construido hasta ahora",
+    "viewCode": "Ver Código",
+    "visitWebsite": "Visitar Sitio Web",
+    "privateProject": "Proyecto Privado - Sin enlaces disponibles",
+    "items": {
+      "isa": {
+        "title": "Sitio Web Universidad ISA",
+        "description": "Sitio web institucional moderno para la Universidad ISA con programas académicos, noticias, vida estudiantil y secciones de investigación. Construido con diseño responsive y experiencia de usuario optimizada."
+      },
+      "dominguez": {
+        "title": "Sitio Web Dominguez Auto Pintura",
+        "description": "Desarrollo de sitio web profesional y responsive para una empresa de pintura y mantenimiento, mostrando servicios de manera efectiva."
+      },
+      "equinox": {
+        "title": "Equinox Insight Hub",
+        "description": "Dashboard de administración Equinox - Sistema de gestión de tickets, operaciones bancarias y análisis en tiempo real. Proyecto privado (solo desarrollo frontend)."
+      },
+      "smartFarming": {
+        "title": "Plataforma Smart Farming",
+        "description": "Plataforma web responsive construida para enseñar a jóvenes en Kenia sobre técnicas modernas y sostenibles de agricultura. Originalmente ideado por Felix Kioni & Derrick Gucema."
+      },
+      "mirage": {
+        "title": "SOFTWARE-WEB-MIRAGE",
+        "description": "Sistema de concesionario basado en web para gestionar ventas de autos, alquileres y subastas de vehículos de manera eficiente y fluida."
+      },
+      "roomlogic": {
+        "title": "RoomLogic (App Android)",
+        "description": "Aplicación de gestión hotelera para Android con MVVM, API REST basada en Rust, notificaciones push y backend dockerizado en Digital Ocean."
+      }
+    }
+  },
+  "contact": {
+    "title": "Hablemos",
+    "title2": "de algo",
+    "titleHighlight": "genial",
+    "title3": "juntos",
+    "interested": "Estoy interesada en ..",
+    "name": "Tu nombre",
+    "email": "Tu correo electrónico",
+    "phone": "Tu número de teléfono",
+    "message": "Tu mensaje",
+    "submit": "Enviar",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado con éxito!",
+    "error": "Ocurrió un error. Por favor, intenta de nuevo más tarde.",
+    "fillFields": "Por favor, completa todos los campos.",
+    "projectTypes": {
+      "ecommerce": "Sitio Web de Ecommerce",
+      "mobile": "App Móvil",
+      "landing": "Landing Page",
+      "portfolio": "Portafolio",
+      "blog": "Sitio Web de Blog",
+      "other": "Otro"
+    }
+  },
+  "statistics": {
+    "years": "Años de Experiencia",
+    "projects": "Proyectos Completados"
+  },
+  "footer": {
+    "greeting": "¡Hola!✨ Soy",
+    "name": "Nathaly Berroa",
+    "madeWith": "Hecho con",
+    "love": "amor",
+    "and": "y",
+    "personality": "personalidad",
+    "by": "por",
+    "author": "nmbf02",
+    "rights": "© 2026 Todos los derechos reservados"
+  }
+}
+

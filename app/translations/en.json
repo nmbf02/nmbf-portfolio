@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello",
+    "name": "I'm Nathaly Berroa",
+    "title": "Web & App Developer | Crafting clean and functional designs"
+  },
+  "about": {
+    "title": "About me",
+    "description": "As a developer, my focus is on creating functional and intuitive digital experiences. I specialize in designing and developing interactive interfaces, ensuring each platform is accessible, engaging, and easy to use. I always seek to enhance user experience through optimized solutions tailored to diverse needs in web environments."
+  },
+  "skills": {
+    "title": "My Skills",
+    "subtitle": "Technologies I've been working with recently"
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Some things I've built so far",
+    "viewCode": "View Code",
+    "visitWebsite": "Visit Website",
+    "privateProject": "Private Project - No links available",
+    "items": {
+      "isa": {
+        "title": "Universidad ISA Website",
+        "description": "Modern institutional website for Universidad ISA featuring academic programs, news, student life, and research sections. Built with responsive design and optimized user experience."
+      },
+      "dominguez": {
+        "title": "Dominguez Auto Painting Website",
+        "description": "Professional and responsive website development for a painting and maintenance company, showcasing services effectively."
+      },
+      "equinox": {
+        "title": "Equinox Insight Hub",
+        "description": "Equinox administration dashboard - Ticket management system, banking operations, and real-time analytics. Private project (Frontend development only)."
+      },
+      "smartFarming": {
+        "title": "Smart Farming Platform",
+        "description": "A responsive web platform built to teach youth in Kenya about modern, sustainable farming techniques. Originally ideated by Felix Kioni & Derrick Gucema."
+      },
+      "mirage": {
+        "title": "SOFTWARE-WEB-MIRAGE",
+        "description": "Web-based dealership system for managing car sales, rentals, and vehicle auctions efficiently and seamlessly."
+      },
+      "roomlogic": {
+        "title": "RoomLogic (Android App)",
+        "description": "Android hotel management app with MVVM, Rust-based REST API, push notifications, and dockerized backend on Digital Ocean."
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's discuss",
+    "title2": "on something",
+    "titleHighlight": "cool",
+    "title3": "together",
+    "interested": "I'm interested in ..",
+    "name": "Your name",
+    "email": "Your email",
+    "phone": "Your phone number",
+    "message": "Your message",
+    "submit": "Submit",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "An error occurred. Please try again later.",
+    "fillFields": "Please fill out all fields.",
+    "projectTypes": {
+      "ecommerce": "Ecommerce Website",
+      "mobile": "App Mobile",
+      "landing": "Landing Page",
+      "portfolio": "Portfolio",
+      "blog": "Blog Website",
+      "other": "Other"
+    }
+  },
+  "statistics": {
+    "years": "Years of Experience",
+    "projects": "Projects Completed"
+  },
+  "footer": {
+    "greeting": "Hello!✨ I'm",
+    "name": "Nathaly Berroa",
+    "madeWith": "Made with",
+    "love": "love",
+    "and": "and",
+    "personality": "personality",
+    "by": "by",
+    "author": "nmbf02",
+    "rights": "© 2026 All rights reserved"
+  }
+}
+

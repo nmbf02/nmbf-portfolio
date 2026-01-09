@@ -1,10 +1,13 @@
 "use client";
 import { ThemeProvider } from "next-themes";
+import { LanguageProvider } from "@/app/contexts/LanguageContext";
 
 export default function Providers({ children }) {
     return (
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            {children}
-        </ThemeProvider>
+        <LanguageProvider>
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+                {children}
+            </ThemeProvider>
+        </LanguageProvider>
     );
 }

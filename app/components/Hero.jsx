@@ -5,9 +5,11 @@ import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import Statistics from "@/app/components/Statistics";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 export default function Hero() {
     const { theme, systemTheme } = useTheme();
+    const { t } = useTranslation();
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -22,51 +24,77 @@ export default function Hero() {
     const currentTheme = theme === "system" ? systemTheme : theme;
 
     return (
-        <section
-            className={`relative flex flex-col justify-center items-start px-8 h-screen transition-all duration-300 ${
-                currentTheme === "dark" ? "bg-black text-white" : "bg-white text-black"
-            }`}
-        >
-            <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+        <section className="relative flex flex-col justify-center items-start px-8 h-screen overflow-hidden">
+            {/* Animated gradient background */}
+            <div className="absolute inset-0 animated-gradient opacity-20 dark:opacity-10"></div>
+            
+            {/* Animated blob shapes */}
+            <div className="absolute top-20 -left-20 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+            <div className="absolute top-40 -right-20 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+            <div className="absolute -bottom-20 left-40 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
 
+            <div className="container mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
                 {/* Texto principal */}
                 <motion.div
-                    initial={{opacity: 0, y: 20}}
-                    animate={{opacity: 1, y: 0}}
-                    transition={{duration: 0.8}}
+                    initial={{opacity: 0, y: 30, scale: 0.9}}
+                    animate={{opacity: 1, y: 0, scale: 1}}
+                    transition={{duration: 0.8, ease: "easeOut"}}
                     className="md:w-1/2"
                 >
-                    <h1 className="text-6xl font-extrabold leading-tight md:text-7xl">
-                        <span className={currentTheme === "dark" ? "text-white" : "text-black"}>Hello</span> 👋,
-                        <br/>
-                        <span className="text-purple-500">I'm Nathaly Berroa</span>
+                    <motion.div
+                        initial={{opacity: 0, x: -50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 0.8, delay: 0.2}}
+                        className="inline-block mb-4 px-4 py-2 glass rounded-full text-sm font-semibold"
+                    >
+                        👋 {t("hero.greeting")}
+                    </motion.div>
+                    
+                    <h1 className="text-6xl font-extrabold leading-tight md:text-7xl lg:text-8xl">
+                        <motion.span
+                            initial={{opacity: 0, y: 20}}
+                            animate={{opacity: 1, y: 0}}
+                            transition={{duration: 0.8, delay: 0.3}}
+                            className="block text-gradient bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500"
+                        >
+                            {t("hero.name")}
+                        </motion.span>
                     </h1>
 
-                    <p className="mt-4 text-xl text-gray-400">
-                        Web & App Developer | Crafting clean and functional designs
-                    </p>
+                    <motion.p
+                        initial={{opacity: 0, y: 20}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.8, delay: 0.5}}
+                        className="mt-6 text-xl md:text-2xl text-gray-700 dark:text-gray-300 font-medium"
+                    >
+                        {t("hero.title")}
+                    </motion.p>
 
                     {/* Redes Sociales */}
                     <motion.div
                         initial={{opacity: 0, y: 20}}
                         animate={{opacity: 1, y: 0}}
-                        transition={{duration: 1, delay: 0.2}}
-                        className="mt-6 flex space-x-4"
+                        transition={{duration: 1, delay: 0.7}}
+                        className="mt-8 flex space-x-4"
                     >
-                        <a href="https://github.com/nmbf02" target="_blank" className="hover:text-gray-400">
-                            <FaGithub size={35}/>
-                        </a>
-                        <a href="https://www.linkedin.com/in/nathalyberroa/" target="_blank"
-                           className="hover:text-gray-400">
-                            <FaLinkedin size={35}/>
-                        </a>
-                        <a href="https://x.com/nmbf02" target="_blank" className="hover:text-gray-400">
-                            <FaTwitter size={35}/>
-                        </a>
-                        <a href="https://www.instagram.com/nmbf02?igsh=MXJ0b2FkZmRjNGp2cw==" target="_blank"
-                           className="hover:text-gray-400">
-                            <FaInstagram size={35}/>
-                        </a>
+                        {[
+                            { icon: FaGithub, href: "https://github.com/nmbf02", color: "hover:text-gray-900 dark:hover:text-white" },
+                            { icon: FaLinkedin, href: "https://www.linkedin.com/in/nathalyberroa/", color: "hover:text-blue-600" },
+                            { icon: FaTwitter, href: "https://x.com/nmbf02", color: "hover:text-blue-400" },
+                            { icon: FaInstagram, href: "https://www.instagram.com/nmbf02?igsh=MXJ0b2FkZmRjNGp2cw==", color: "hover:text-pink-500" },
+                        ].map((social, index) => (
+                            <motion.a
+                                key={index}
+                                href={social.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ scale: 1.2, rotate: 5 }}
+                                whileTap={{ scale: 0.9 }}
+                                className={`p-3 glass rounded-full ${social.color} transition-all duration-300 glow-hover`}
+                            >
+                                <social.icon size={24}/>
+                            </motion.a>
+                        ))}
                     </motion.div>
                 </motion.div>
 
@@ -86,25 +114,30 @@ export default function Hero() {
             <motion.div
                 initial={{opacity: 0, y: 20}}
                 animate={{opacity: 1, y: 0}}
-                transition={{duration: 1, delay: 0.4}}
-                className={`absolute bottom-0 left-0 w-full py-6 transition-all duration-300 ${
-                    currentTheme === "dark" ? "bg-[#1E1E1E]" : "bg-gray-200"
-                }`}
+                transition={{duration: 1, delay: 0.9}}
+                className="absolute bottom-0 left-0 w-full py-8 glass border-t border-white/10"
             >
                 <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-8">
-
-                    {/* Estadísticas - Alineadas con el texto principal */}
+                    {/* Estadísticas */}
                     <Statistics />
 
-                    {/* Logos de tecnologías */}
-                    <div className="flex space-x-8 ml-auto">
-                        <Image src="/icons/javascript.svg" alt="JS" width={50} height={50} />
-                        <Image src="/icons/html5.svg" alt="HTML5" width={50} height={50} />
-                        <Image src="/icons/css3.svg" alt="CSS3" width={50} height={50} />
-                        <Image src="/icons/react.svg" alt="React" width={50} height={50} />
-                        <Image src="/icons/php.svg" alt="PHP" width={50} height={50} />
-                    </div>
-
+                    {/* Logos de tecnologías con animación */}
+                    <motion.div
+                        initial={{opacity: 0, x: 50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 1, delay: 1.1}}
+                        className="flex space-x-6 ml-auto"
+                    >
+                        {["javascript", "html5", "css3", "react", "php"].map((tech, index) => (
+                            <motion.div
+                                key={tech}
+                                whileHover={{ scale: 1.2, y: -5 }}
+                                className="p-2 glass rounded-lg"
+                            >
+                                <Image src={`/icons/${tech}.svg`} alt={tech.toUpperCase()} width={40} height={40} />
+                            </motion.div>
+                        ))}
+                    </motion.div>
                 </div>
             </motion.div>
 
