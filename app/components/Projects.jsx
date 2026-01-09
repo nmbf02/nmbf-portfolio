@@ -124,7 +124,7 @@ export default function Projects() {
 
                                 <div className="relative z-10">
                                     <h3 className="text-xl font-bold mt-2 mb-2 text-white">{t(`projects.items.${project.key}.title`)}</h3>
-                                    <p className="text-white/80 text-sm mb-4 line-clamp-3">{t(`projects.items.${project.key}.description`)}</p>
+                                    <p className="text-white/80 text-sm mb-4 leading-relaxed">{t(`projects.items.${project.key}.description`)}</p>
                                     {project.isPrivate ? (
                                         <div className="mt-4 text-sm text-white/60 italic px-3 py-2 glass rounded-lg">
                                             {t("projects.privateProject")}
