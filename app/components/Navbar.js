@@ -13,6 +13,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [isTransparent, setIsTransparent] = useState(true);
     const menuRef = useRef(null);
+    const menuButtonRef = useRef(null);
 
     useEffect(() => {
         setMounted(true);
@@ -33,7 +34,9 @@ export default function Navbar() {
         };
 
         const handleClickOutside = (event) => {
-            if (menuRef.current && !menuRef.current.contains(event.target)) {
+            const isOutsideMenu = menuRef.current && !menuRef.current.contains(event.target);
+            const isMenuButton = menuButtonRef.current && menuButtonRef.current.contains(event.target);
+            if (isOutsideMenu && !isMenuButton) {
                 setIsOpen(false);
             }
         };
@@ -116,8 +119,8 @@ export default function Navbar() {
                     )}
                 </div>
 
-                <button className="md:hidden p-2 -m-2 rounded-lg hover:bg-white/10 transition" onClick={() => setIsOpen(!isOpen)} aria-label="Menu">
-                    <span className="text-xl">☰</span>
+                <button ref={menuButtonRef} className="md:hidden p-2 -m-2 rounded-lg hover:bg-white/10 transition" onClick={() => setIsOpen(prev => !prev)} aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}>
+                    <span className="text-xl">{isOpen ? "✕" : "☰"}</span>
                 </button>
             </div>
 
@@ -126,10 +129,10 @@ export default function Navbar() {
                     ref={menuRef}
                     className="md:hidden bg-black/90 dark:bg-black/95 backdrop-blur-lg border-t border-gray-700/20 py-4 px-4 absolute top-full left-0 w-full flex flex-col items-center gap-1 max-h-[85vh] overflow-y-auto"
                 >
-                    <Link href="#About" className="block py-2 hover:text-gray-400">{t.nav.about}</Link>
-                    <Link href="#Skills" className="block py-2 hover:text-gray-400">{t.nav.skills}</Link>
-                    <Link href="#Projects" className="block py-2 hover:text-gray-400">{t.nav.projects}</Link>
-                    <Link href="#Contact" className="block py-2 hover:text-gray-400">{t.nav.contact}</Link>
+                    <Link href="#About" onClick={() => setIsOpen(false)} className="block py-2 hover:text-gray-400 w-full text-center">{t.nav.about}</Link>
+                    <Link href="#Skills" onClick={() => setIsOpen(false)} className="block py-2 hover:text-gray-400 w-full text-center">{t.nav.skills}</Link>
+                    <Link href="#Projects" onClick={() => setIsOpen(false)} className="block py-2 hover:text-gray-400 w-full text-center">{t.nav.projects}</Link>
+                    <Link href="#Contact" onClick={() => setIsOpen(false)} className="block py-2 hover:text-gray-400 w-full text-center">{t.nav.contact}</Link>
                     <div className="flex gap-2 pt-4 border-t border-gray-600 mt-2">
                         <button onClick={() => setLanguage("en")} className={`px-3 py-1 rounded text-sm ${lang === "en" ? "bg-emerald-600" : "bg-gray-700"}`}>EN</button>
                         <button onClick={() => setLanguage("es")} className={`px-3 py-1 rounded text-sm ${lang === "es" ? "bg-emerald-600" : "bg-gray-700"}`}>ES</button>
