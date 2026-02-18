@@ -14,29 +14,27 @@ export default function ThemeToggle() {
     if (!mounted) return <div className="w-10 h-10" />; // Evita la hidratación incorrecta
 
     return (
-        <div className="flex items-center space-x-2 bg-gray-800 p-2 rounded-full shadow-md">
-            {/* Modo Sistema */}
+        <div className="flex items-center p-1 rounded-full bg-slate-200/90 dark:bg-slate-700/90 border border-slate-300/60 dark:border-slate-600/60 shadow-sm">
             <button
-                className={`p-2 rounded-full transition ${resolvedTheme === "system" ? "bg-gray-700" : ""}`}
+                className={`p-1.5 rounded-full transition-all duration-200 ${resolvedTheme === "system" ? "bg-emerald-500 text-white shadow-md" : "text-slate-500 dark:text-slate-400 hover:bg-slate-300/50 dark:hover:bg-slate-600/50"}`}
                 onClick={() => setTheme("system")}
+                title="System"
             >
-                <ComputerDesktopIcon className="h-5 w-5 text-gray-400" />
+                <ComputerDesktopIcon className="h-4 w-4" />
             </button>
-
-            {/* Modo Claro */}
             <button
-                className={`p-2 rounded-full transition ${resolvedTheme === "light" ? "bg-gray-700" : ""}`}
+                className={`p-1.5 rounded-full transition-all duration-200 ${resolvedTheme === "light" ? "bg-amber-400 text-amber-900 shadow-md" : "text-slate-500 dark:text-slate-400 hover:bg-slate-300/50 dark:hover:bg-slate-600/50"}`}
                 onClick={() => setTheme("light")}
+                title="Light"
             >
-                <SunIcon className="h-5 w-5 text-yellow-400" />
+                <SunIcon className="h-4 w-4" />
             </button>
-
-            {/* Modo Oscuro */}
             <button
-                className={`p-2 rounded-full transition ${resolvedTheme === "dark" ? "bg-gray-700" : ""}`}
+                className={`p-1.5 rounded-full transition-all duration-200 ${resolvedTheme === "dark" ? "bg-slate-600 text-slate-100 shadow-md dark:bg-slate-500 dark:text-white" : "text-slate-500 dark:text-slate-400 hover:bg-slate-300/50 dark:hover:bg-slate-600/50"}`}
                 onClick={() => setTheme("dark")}
+                title="Dark"
             >
-                <MoonIcon className="h-5 w-5 text-gray-200" />
+                <MoonIcon className="h-4 w-4" />
             </button>
         </div>
     );

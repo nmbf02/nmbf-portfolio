@@ -1,23 +1,19 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/app/context/LanguageContext";
 
-const topSkills = [
-    { name: "JavaScript", icon: "/icons/javascript.svg" },
-    { name: "HTML5", icon: "/icons/html5.svg" },
-    { name: "CSS3", icon: "/icons/css3.svg" },
-    { name: "React", icon: "/icons/react.svg" },
-    { name: "Next.js", icon: "/icons/nextjs.svg" },
-    { name: "Laravel", icon: "/icons/laravel.svg" },
-    { name: "MySQL", icon: "/icons/mysql.svg" },
-    { name: "PostgreSQL", icon: "/icons/postgresql.svg" },
-    { name: "Android Studio", icon: "/icons/androidstudio.svg" },
-    { name: "WebStorm", icon: "/icons/webstorm.svg" },
+const certifications = [
+    { name: "INDOTEL", icon: "/icons/indotel.svg" },
+    { name: "INFOTEP", icon: "/icons/infotep.svg" },
+    { name: "CISCO", icon: "/icons/cisco.svg" },
+    { name: "ITLA", icon: "/icons/itla.svg" },
 ];
 
 export default function Skills() {
+    const { t } = useLanguage();
     return (
-        <section id="Skills" className="relative py-20 px-8 bg-gray-100 dark:bg-black">
+        <section id="Skills" className="relative py-16 sm:py-20 px-4 sm:px-6 md:px-8 bg-gray-100 dark:bg-black overflow-hidden">
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
 
                 <div className="hidden md:block md:w-1/2 relative mt-10 md:mt-0">
@@ -30,13 +26,13 @@ export default function Skills() {
                 </div>
 
                 <div className="w-full md:w-1/2">
-                    <h2 className="text-3xl font-bold text-black dark:text-white">My Skills</h2>
-                    <p className="text-gray-600 dark:text-gray-400 mt-2">
-                        Technologies I've been working with recently
+                    <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white">{t.skills.title}</h2>
+                    <p className="text-gray-600 dark:text-gray-400 mt-2 text-sm sm:text-base">
+                        {t.skills.subtitle}
                     </p>
 
                     <motion.div
-                        className="grid grid-cols-5 sm:grid-cols-5 lg:grid-cols-5 gap-6 mt-8"
+                        className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-6 sm:mt-8"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: false, amount: 0.5 }}
@@ -46,17 +42,17 @@ export default function Skills() {
                             visible: { opacity: 1, y: 0 }
                         }}
                     >
-                        {topSkills.map((skill, index) => (
+                        {certifications.map((cert, index) => (
                             <motion.div
                                 key={index}
                                 className="flex flex-col items-center"
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ type: "spring", stiffness: 300 }}
                             >
-                                <div className="bg-gray-200 dark:bg-gray-800 p-4 rounded-lg">
-                                    <Image src={skill.icon} alt={skill.name} width={50} height={50} />
+                                <div className="bg-gray-200 dark:bg-gray-800 p-3 sm:p-4 rounded-lg">
+                                    <Image src={cert.icon} alt={cert.name} width={80} height={50} className="object-contain max-w-full h-auto" />
                                 </div>
-                                <p className="text-sm text-gray-700 dark:text-gray-300 mt-2">{skill.name}</p>
+                                <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 mt-2">{cert.name}</p>
                             </motion.div>
                         ))}
                     </motion.div>

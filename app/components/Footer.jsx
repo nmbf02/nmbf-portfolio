@@ -1,40 +1,38 @@
 "use client";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { useLanguage } from "@/app/context/LanguageContext";
 
 export default function Footer() {
+    const { t } = useLanguage();
     return (
-        <footer className="bg-black dark:bg-purple-900 text-white py-8 text-center transition-all duration-300">
+        <footer className="bg-gray-900 text-white py-6 sm:py-8 px-4 sm:px-6 text-center transition-all duration-300 border-t border-gray-800 overflow-hidden">
             <div className="container mx-auto">
-                {/* Logo or name */}
-                <h2 className="text-2xl font-bold">
-                    Hello!✨ I'm <span className="font-semibold">Nathaly Berroa</span>
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold">
+                    <span className="font-semibold">Angel Manuel Firpo Estrella</span>
                 </h2>
-
-                {/* Custom message */}
-                <p className="mt-2 text-sm">
-                    Made with <span className="text-red-400 font-semibold">love</span> and{" "}
-                    <span className="text-pink-400 font-semibold">personality</span> by{" "}
-                    <span className="font-semibold">nmbf02</span>
+                <p className="mt-2 text-xs sm:text-sm text-gray-400">
+                    {t.footer.subtitle}
                 </p>
-
-                {/* Copyright */}
-                <p className="mt-2 text-xs text-gray-400">
-                    © 2025 All rights reserved
-                </p>
-
-                {/* Social media icons */}
-                <div className="flex justify-center space-x-6 mt-4">
-                    <a href="https://github.com/nmbf02" target="_blank" className="hover:text-gray-400 transition">
-                        <FaGithub size={28} />
+                <p className="mt-1 text-xs sm:text-sm break-words">
+                    Santiago de los Caballeros •{" "}
+                    <a href="mailto:manuelfirpo2222@gmail.com" className="text-emerald-400 hover:text-emerald-300">
+                        manuelfirpo2222@gmail.com
+                    </a> •{" "}
+                    <a href="tel:8094788030" className="text-emerald-400 hover:text-emerald-300">
+                        +1 (809) 478-8030
                     </a>
-                    <a href="https://www.linkedin.com/in/nathalyberroa/" target="_blank" className="hover:text-gray-400 transition">
+                </p>
+
+                <p className="mt-4 text-xs text-gray-500">
+                    © 2025 Angel Manuel Firpo Estrella. {t.footer.rights}
+                </p>
+
+                <div className="flex justify-center gap-4 sm:gap-6 mt-4">
+                    <a href="https://www.linkedin.com/in/angel-manuel-firpo-estrella-316674116/" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition" title="LinkedIn">
                         <FaLinkedin size={28} />
                     </a>
-                    <a href="https://x.com/nmbf02" target="_blank" className="hover:text-gray-400 transition">
-                        <FaTwitter size={28} />
-                    </a>
-                    <a href="https://www.instagram.com/nmbf02?igsh=MXJ0b2FkZmRjNGp2cw==" target="_blank" className="hover:text-gray-400 transition">
-                        <FaInstagram size={28} />
+                    <a href="https://wa.me/18094788030" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition" title="WhatsApp">
+                        <FaWhatsapp size={28} />
                     </a>
                 </div>
             </div>

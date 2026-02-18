@@ -1,23 +1,22 @@
 "use client";
 import CountUp from "react-countup";
+import { useLanguage } from "@/app/context/LanguageContext";
 
 const Statistics = () => {
+    const { t } = useLanguage();
     return (
-        <div className="flex space-x-16 pl-0 md:pl-0">
-            {/* Bloque 1 */}
-            <div className="flex items-center text-xl">
-        <span className="text-5xl font-bold text-purple-500">
-          <CountUp start={0} end={2} duration={2} />
-        </span>
-                <p className="ml-3 text-gray-400">Years of Experience</p>
+        <div className="flex flex-wrap justify-center sm:justify-start gap-4 sm:gap-6 md:gap-12">
+            <div className="flex items-center gap-2 sm:gap-3 text-base sm:text-lg md:text-xl">
+                <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-500">
+                    <CountUp start={0} end={6} duration={2} />
+                </span>
+                <p className="text-gray-500 dark:text-gray-400 text-sm sm:text-base">{t.stats.years}</p>
             </div>
-
-            {/* Bloque 2 */}
-            <div className="flex items-center text-xl">
-        <span className="text-5xl font-bold text-purple-500">
-          <CountUp start={0} end={26} duration={3} />
-        </span>
-                <p className="ml-3 text-gray-400">Projects Completed</p>
+            <div className="flex items-center gap-2 sm:gap-3 text-base sm:text-lg md:text-xl">
+                <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-500">
+                    <CountUp start={0} end={10} duration={3} />
+                </span>
+                <p className="text-gray-500 dark:text-gray-400 text-sm sm:text-base">{t.stats.certifications}</p>
             </div>
         </div>
     );

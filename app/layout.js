@@ -20,13 +20,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-    title: "Nathaly Berroa | Portfolio",
-    description: "Full Stack Developer crafting dynamic, scalable, and user-friendly web solutions using Next.js, Tailwind CSS, and modern technologies.",
+    title: "Angel Manuel Firpo Estrella | Cybersecurity Analyst",
+    description: "Cybersecurity Analyst | IT Coordinator | Specialist in Infrastructure and Information Security. Cisco, Fortinet, VMware, Windows Server, Active Directory.",
 };
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html lang="en" suppressHydrationWarning className="overflow-x-hidden">
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Providers>
             <Navbar />

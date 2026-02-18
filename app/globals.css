@@ -16,5 +16,31 @@
 
 /* Apply dynamic colors */
 body {
-  @apply bg-[rgb(var(--background))] text-[rgb(var(--foreground))] font-sans;
+  @apply bg-[rgb(var(--background))] text-[rgb(var(--foreground))] font-sans overflow-x-hidden;
+}
+
+/* Prevent horizontal scroll on all sections */
+html {
+  overflow-x: hidden;
+}
+
+/* Projects slider - navigation & pagination */
+.projects-slider .swiper-button-next,
+.projects-slider .swiper-button-prev {
+  color: rgb(16 185 129);
+}
+.projects-slider .swiper-button-next:after,
+.projects-slider .swiper-button-prev:after {
+  font-size: 1.5rem;
+}
+.projects-slider .swiper-pagination-bullet {
+  background: rgb(148 163 184);
+  opacity: 0.6;
+}
+.projects-slider .swiper-pagination-bullet-active {
+  background: rgb(16 185 129);
+  opacity: 1;
+}
+.dark .projects-slider .swiper-pagination-bullet {
+  background: rgb(148 163 184);
 }
