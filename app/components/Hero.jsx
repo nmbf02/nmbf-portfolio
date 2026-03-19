@@ -128,7 +128,7 @@ export default function Hero() {
                         transition={{duration: 1, delay: 1.1}}
                         className="flex space-x-6 ml-auto"
                     >
-                        {["javascript", "html5", "css3", "react", "php"].map((tech, index) => (
+                        {["javascript", "typescript", "css3", "react", "php"].map((tech, index) => (
                             <motion.div
                                 key={tech}
                                 whileHover={{ scale: 1.2, y: -5 }}

@@ -2,6 +2,7 @@
   "nav": {
     "about": "Sobre mí",
     "skills": "Habilidades",
+    "experience": "Proyectos",
     "projects": "Proyectos",
     "contact": "Contacto"
   },
@@ -18,8 +19,35 @@
     "title": "Mis Habilidades",
     "subtitle": "Tecnologías con las que he estado trabajando recientemente"
   },
+  "experience": {
+    "titlePrefix": "MIS",
+    "titleHighlight": "PROYECTOS",
+    "subtitle": "Un resumen de mi evolución profesional y las empresas que han confiado en mi trabajo.",
+    "items": {
+      "entrepreneurDate": "Marzo 2025 - Presente",
+      "backendDate": "Agosto 2023 - Marzo 2025",
+      "webdevDate": "Mayo 2022 - Agosto 2023",
+      "entrepreneur": {
+        "title": "Emprendedor",
+        "company": "Por cuenta propia",
+        "description": "Desarrollando soluciones digitales propias y productos innovadores para pequeñas empresas, incluyendo sistemas de facturación, aplicaciones móviles y plataformas web bajo mi marca personal."
+      },
+      "backend": {
+        "title": "Backend Developer II",
+        "company": "Hytech Nexo",
+        "description": "Responsable de la arquitectura de servicios escalables, optimización de bases de datos y desarrollo de APIs críticas para sistemas de gestión empresarial."
+      },
+      "webdev": {
+        "title": "Web Developer",
+        "company": "DevCreativo LLC",
+        "description": "Diseño y desarrollo de interfaces de usuario modernas y funcionales, asegurando la mejor experiencia de usuario y rendimiento óptimo."
+      }
+    }
+  },
   "projects": {
     "title": "Mis Proyectos",
+    "titlePrefix": "MIS",
+    "titleHighlight": "PROYECTOS",
     "subtitle": "Algunas cosas que he construido hasta ahora",
     "viewCode": "Ver Código",
     "visitWebsite": "Visitar Sitio Web",

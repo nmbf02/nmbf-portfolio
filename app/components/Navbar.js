@@ -50,7 +50,7 @@ export default function Navbar() {
                 <ul className="hidden md:flex space-x-6">
                     <li><Link href="#About" className="hover:text-purple-600 dark:hover:text-purple-300 transition-colors">{t("nav.about")}</Link></li>
                     <li><Link href="#Skills" className="hover:text-purple-600 dark:hover:text-purple-300 transition-colors">{t("nav.skills")}</Link></li>
-                    <li><Link href="#Projects" className="hover:text-purple-600 dark:hover:text-purple-300 transition-colors">{t("nav.projects")}</Link></li>
+                    <li><Link href="#Experience" className="hover:text-purple-600 dark:hover:text-purple-300 transition-colors">{t("nav.experience")}</Link></li>
                     <li><Link href="#Contact" className="hover:text-purple-600 dark:hover:text-purple-300 transition-colors">{t("nav.contact")}</Link></li>
                 </ul>
 
@@ -145,7 +145,7 @@ export default function Navbar() {
                 >
                     <Link href="#About" className="block py-2 hover:text-purple-600 dark:hover:text-purple-300 transition-colors text-gray-900 dark:text-white" onClick={() => setIsOpen(false)}>{t("nav.about")}</Link>
                     <Link href="#Skills" className="block py-2 hover:text-purple-600 dark:hover:text-purple-300 transition-colors text-gray-900 dark:text-white" onClick={() => setIsOpen(false)}>{t("nav.skills")}</Link>
-                    <Link href="#Projects" className="block py-2 hover:text-purple-600 dark:hover:text-purple-300 transition-colors text-gray-900 dark:text-white" onClick={() => setIsOpen(false)}>{t("nav.projects")}</Link>
+                    <Link href="#Experience" className="block py-2 hover:text-purple-600 dark:hover:text-purple-300 transition-colors text-gray-900 dark:text-white" onClick={() => setIsOpen(false)}>{t("nav.experience")}</Link>
                     <Link href="#Contact" className="block py-2 hover:text-purple-600 dark:hover:text-purple-300 transition-colors text-gray-900 dark:text-white" onClick={() => setIsOpen(false)}>{t("nav.contact")}</Link>
                 </div>
             )}

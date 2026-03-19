@@ -4,7 +4,7 @@ import Navbar from "@/app/components/Navbar";
 import Hero from "@/app/components/Hero";
 import About from "@/app/components/About";
 import Skills from "@/app/components/Skills";
-import Projects from "@/app/components/Projects";
+import Experience from "@/app/components/Experience";
 import Contact from "@/app/components/Contact";
 import Footer from "@/app/components/Footer";
 import Providers from "./providers";
@@ -33,10 +33,10 @@ export default function RootLayout({ children }) {
             <Hero />
             <About />
             <Skills />
-            <Projects />
+            <Experience />
             <Contact />
             <Footer />
-            <main className="container mx-auto px-4">{children}</main>
+            {children}
         </Providers>
         </body>
         </html>

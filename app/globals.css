@@ -2,6 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Horizontal marquee (Skills) */
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.skills-marquee-track {
+  width: max-content;
+  animation: marquee-left 26s linear infinite;
+}
+
+.skills-marquee:hover .skills-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Typewriter caret */
+@keyframes caret-blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+.typewriter-caret {
+  display: inline-block;
+  width: 0.6ch;
+  margin-left: 0.15ch;
+  animation: caret-blink 1s step-end infinite;
+}
+
 /* Setting colors in light mode (default) */
 :root {
   --background: 255, 255, 255; /* White */
