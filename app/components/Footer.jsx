@@ -3,6 +3,13 @@ import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import { useTranslation } from "@/app/hooks/useTranslation";
 import { motion } from "framer-motion";
 
+/**
+ * Footer
+ *
+ * - Navigation shortcuts to in-page sections.
+ * - Social links.
+ * - Theme is handled by Tailwind `dark:` variants in the app (see `globals.css` and Providers).
+ */
 export default function Footer() {
     const { t } = useTranslation();
     const quote = "“Solo tienes que ser un 1% mejor cada día”";

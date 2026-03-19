@@ -4,6 +4,13 @@ import { useEffect } from "react";
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
+/**
+ * Experience section.
+ *
+ * This section is used as a vertical timeline to showcase PROJECTS (not jobs).
+ * Cards use a simple IntersectionObserver reveal animation (CSS class toggles)
+ * to keep the same feel as the original "Trayectoria" timeline.
+ */
 export default function Experience() {
     const { t } = useTranslation();
 

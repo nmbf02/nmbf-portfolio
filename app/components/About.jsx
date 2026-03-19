@@ -3,6 +3,14 @@ import { motion, useInView } from "framer-motion";
 import { useTranslation } from "@/app/hooks/useTranslation";
 import { useEffect, useMemo, useRef, useState } from "react";
 
+/**
+ * About section ("Sobre mí").
+ *
+ * - Renders the about description with an editorial/newspaper look.
+ * - Applies a typewriter effect that replays every time the paragraph
+ *   re-enters the viewport (reset on exit, start on enter).
+ * - The caret blink is driven by `.typewriter-caret` in `app/globals.css`.
+ */
 export default function About() {
     const { t } = useTranslation();
     const description = t("about.description");
@@ -14,7 +22,7 @@ export default function About() {
     const intervalRef = useRef(null);
 
     useEffect(() => {
-        // Al salir de la sección, resetea para poder re-animar al volver a entrar.
+        // Reset on exit so it can replay on next enter.
         if (!inView) {
             if (intervalRef.current) window.clearInterval(intervalRef.current);
             intervalRef.current = null;

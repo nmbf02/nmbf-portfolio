@@ -1,26 +1,26 @@
 # Portfolio de Nathaly Berroa
 
-Portfolio profesional desarrollado con Next.js que muestra proyectos, habilidades y experiencia como desarrolladora Full Stack. El sitio incluye animaciones fluidas, modo oscuro/claro, y un diseño completamente responsive.
+Portfolio profesional desarrollado con **Next.js (App Router)**. Incluye **modo oscuro/claro**, **i18n (ES/EN)**, animaciones con **Framer Motion**, y un diseño responsive con **Tailwind CSS**.
 
 ## 🚀 Características
 
 - **Diseño Moderno y Responsive**: Interfaz adaptativa que se ve perfecta en todos los dispositivos
 - **Modo Oscuro/Claro**: Soporte para temas claro, oscuro y sistema con persistencia
 - **Animaciones Fluidas**: Transiciones y animaciones suaves usando Framer Motion
-- **Sección de Proyectos**: Carrusel interactivo con Swiper mostrando proyectos destacados
+- **Sección de Proyectos (timeline)**: Los proyectos se muestran en un timeline estilo “Trayectoria”
 - **Formulario de Contacto**: Integración con EmailJS para envío de mensajes
 - **Estadísticas Dinámicas**: Contadores animados con React CountUp
 - **Navegación Suave**: Scroll suave entre secciones con navbar fijo
 - **Optimización de Imágenes**: Uso de Next.js Image para carga optimizada
+- **Typewriter en “Sobre mí”**: Animación máquina de escribir que se reinicia al entrar/salir de la sección
 
 ## 🛠️ Tecnologías Utilizadas
 
 ### Frontend
-- **Next.js 15.1.7** - Framework React con App Router
-- **React 19.0.0** - Biblioteca de UI
+- **Next.js** - Framework React con App Router
+- **React** - Biblioteca de UI
 - **Tailwind CSS 3.4.1** - Framework de estilos utility-first
 - **Framer Motion 12.4.7** - Biblioteca de animaciones
-- **Swiper 11.2.4** - Carrusel de proyectos
 - **React Icons 5.5.0** - Iconos populares
 - **Next Themes 0.4.4** - Gestión de temas
 
@@ -95,7 +95,6 @@ nmbf-portfolio/
 │   │   ├── Footer.jsx       # Pie de página
 │   │   ├── Hero.jsx         # Sección principal/hero
 │   │   ├── Navbar.js        # Barra de navegación
-│   │   ├── Projects.jsx     # Carrusel de proyectos
 │   │   ├── Skills.jsx       # Sección de habilidades
 │   │   ├── Statistics.jsx   # Estadísticas animadas
 │   │   └── ThemeToggle.jsx  # Toggle de tema
@@ -103,6 +102,7 @@ nmbf-portfolio/
 │   ├── page.js              # Página principal
 │   ├── providers.jsx        # Proveedores de contexto (Theme)
 │   └── globals.css          # Estilos globales
+│   ├── translations/        # ES/EN JSON
 ├── public/                  # Archivos estáticos
 │   ├── images/              # Imágenes del proyecto
 │   ├── icons/               # Iconos de tecnologías
@@ -119,17 +119,13 @@ nmbf-portfolio/
 Sección principal con presentación personal, enlaces a redes sociales y estadísticas. Incluye animaciones de entrada y soporte para modo oscuro.
 
 ### About
-Sección que describe la experiencia y enfoque como desarrolladora, con gráfica SVG animada.
+Sección “Sobre mí” con estilo editorial y animación de máquina de escribir al entrar en viewport.
 
 ### Skills
-Muestra las tecnologías y herramientas principales con iconos interactivos y animaciones hover.
+Muestra habilidades en un **timeline horizontal tipo marquee** (autoplay, pausa al hover).
 
-### Projects
-Carrusel de proyectos destacados con:
-- Navegación y paginación
-- Efectos hover 3D
-- Enlaces a repositorios de GitHub
-- Diseño responsive
+### Experience (Mis Proyectos)
+Timeline vertical que reutiliza el layout de “Trayectoria” para mostrar **proyectos** (imagen + descripción + link/privado).
 
 ### Contact
 Formulario de contacto con:
@@ -166,7 +162,7 @@ El formulario de contacto utiliza EmailJS. Para configurarlo:
 
 - **Colores**: Edita `tailwind.config.mjs` para cambiar la paleta de colores
 - **Contenido**: Modifica los componentes en `app/components/` para actualizar información
-- **Proyectos**: Edita el array `projects` en `app/components/Projects.jsx`
+- **Proyectos**: Edita el array `projects` en `app/components/Experience.jsx`
 - **Habilidades**: Modifica el array `topSkills` en `app/components/Skills.jsx`
 
 ## 🚀 Despliegue
@@ -194,10 +190,11 @@ npm run start
 
 ## 📝 Notas
 
-- El proyecto utiliza Next.js 15 con App Router
+- El proyecto utiliza Next.js con App Router
 - Las imágenes deben estar optimizadas y en formato WebP cuando sea posible
 - El modo oscuro se persiste usando `localStorage`
 - El formulario de contacto requiere configuración de EmailJS para funcionar
+- i18n se gestiona por JSON en `app/translations/` y un contexto de idioma
 
 ## 👤 Autor
 

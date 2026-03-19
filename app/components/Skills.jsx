@@ -3,6 +3,14 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTranslation } from "@/app/hooks/useTranslation";
 
+/**
+ * Skills section.
+ *
+ * Visual: horizontal "timeline" that auto-scrolls (marquee) and pauses on hover.
+ * Implementation notes:
+ * - The list is duplicated (`[...topSkills, ...topSkills]`) to create a seamless loop.
+ * - Animation is driven by `.skills-marquee-track` + keyframes in `app/globals.css`.
+ */
 const topSkills = [
     { name: "JavaScript", icon: "/icons/javascript.svg" },
     { name: "TypeScript", icon: "/icons/typescript.svg" },
@@ -57,6 +65,7 @@ export default function Skills() {
                         <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-purple-50 via-purple-50/40 to-transparent dark:from-gray-900 dark:via-gray-900/40" />
 
                         <div className="skills-marquee-track flex gap-6 pr-8">
+                            {/* Duplicate the list to keep the marquee continuous. */}
                             {[...topSkills, ...topSkills].map((skill, idx) => (
                                 <motion.div
                                     key={`${skill.name}-${idx}`}
