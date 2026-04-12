@@ -53,6 +53,10 @@
     "visitWebsite": "Visitar Sitio Web",
     "privateProject": "Proyecto Privado - Sin enlaces disponibles",
     "items": {
+      "cjtaxes": {
+        "title": "CJ Tax Services",
+        "description": "Sitio de marketing y engagement para servicios de preparación de impuestos, hecho con React y Vite. La portada mezcla un estilo editorial tipo periódico con pasos del proceso al hacer scroll, un estimador ilustrativo de reembolso, un término fiscal del día, un quiz breve y textos bilingües."
+      },
       "isa": {
         "title": "Sitio Web Universidad ISA",
         "description": "Sitio web institucional moderno para la Universidad ISA con programas académicos, noticias, vida estudiantil y secciones de investigación. Construido con diseño responsive y experiencia de usuario optimizada."

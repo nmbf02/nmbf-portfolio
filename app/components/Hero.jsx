@@ -29,9 +29,9 @@ export default function Hero() {
             <div className="absolute inset-0 animated-gradient opacity-20 dark:opacity-10"></div>
             
             {/* Animated blob shapes */}
-            <div className="absolute top-20 -left-20 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
-            <div className="absolute top-40 -right-20 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
-            <div className="absolute -bottom-20 left-40 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
+            <div className="absolute top-20 -left-20 w-96 h-96 bg-blush rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+            <div className="absolute top-40 -right-20 w-96 h-96 bg-mist rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+            <div className="absolute -bottom-20 left-40 w-96 h-96 bg-clay rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
 
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
                 {/* Texto principal */}
@@ -55,7 +55,7 @@ export default function Hero() {
                             initial={{opacity: 0, y: 20}}
                             animate={{opacity: 1, y: 0}}
                             transition={{duration: 0.8, delay: 0.3}}
-                            className="block text-gradient bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500"
+                            className="block text-gradient bg-clip-text text-transparent bg-gradient-to-r from-forest via-clay to-blush"
                         >
                             {t("hero.name")}
                         </motion.span>
@@ -65,7 +65,7 @@ export default function Hero() {
                         initial={{opacity: 0, y: 20}}
                         animate={{opacity: 1, y: 0}}
                         transition={{duration: 0.8, delay: 0.5}}
-                        className="mt-6 text-xl md:text-2xl text-gray-700 dark:text-gray-300 font-medium"
+                        className="mt-6 text-xl md:text-2xl text-forest/85 dark:text-cream/85 font-medium"
                     >
                         {t("hero.title")}
                     </motion.p>
@@ -78,10 +78,10 @@ export default function Hero() {
                         className="mt-8 flex space-x-4"
                     >
                         {[
-                            { icon: FaGithub, href: "https://github.com/nmbf02", color: "hover:text-gray-900 dark:hover:text-white" },
-                            { icon: FaLinkedin, href: "https://www.linkedin.com/in/nathalyberroa/", color: "hover:text-blue-600" },
-                            { icon: FaTwitter, href: "https://x.com/nmbf02", color: "hover:text-blue-400" },
-                            { icon: FaInstagram, href: "https://www.instagram.com/nmbf02?igsh=MXJ0b2FkZmRjNGp2cw==", color: "hover:text-pink-500" },
+                            { icon: FaGithub, href: "https://github.com/nmbf02", color: "hover:text-forest dark:hover:text-cream" },
+                            { icon: FaLinkedin, href: "https://www.linkedin.com/in/nathalyberroa/", color: "hover:text-mist" },
+                            { icon: FaTwitter, href: "https://x.com/nmbf02", color: "hover:text-mist" },
+                            { icon: FaInstagram, href: "https://www.instagram.com/nmbf02?igsh=MXJ0b2FkZmRjNGp2cw==", color: "hover:text-blush" },
                         ].map((social, index) => (
                             <motion.a
                                 key={index}
@@ -115,7 +115,7 @@ export default function Hero() {
                 initial={{opacity: 0, y: 20}}
                 animate={{opacity: 1, y: 0}}
                 transition={{duration: 1, delay: 0.9}}
-                className="absolute bottom-0 left-0 w-full py-8 glass border-t border-white/10"
+                className="absolute bottom-0 left-0 w-full py-8 glass border-t border-forest/10 dark:border-cream/15"
             >
                 <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-8">
                     {/* Estadísticas */}

@@ -53,6 +53,10 @@
     "visitWebsite": "Visit Website",
     "privateProject": "Private Project - No links available",
     "items": {
+      "cjtaxes": {
+        "title": "CJ Tax Services",
+        "description": "Marketing and engagement site for tax preparation services, built with React and Vite. The home page combines a newspaper / editorial visual style with scroll-driven process steps, an illustrative refund estimator, a daily tax term, a short quiz, and bilingual copy."
+      },
       "isa": {
         "title": "Universidad ISA Website",
         "description": "Modern institutional website for Universidad ISA featuring academic programs, news, student life, and research sections. Built with responsive design and optimized user experience."

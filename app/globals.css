@@ -38,16 +38,16 @@
   animation: caret-blink 1s step-end infinite;
 }
 
-/* Setting colors in light mode (default) */
+/* Setting colors in light mode (default) — crema + verde bosque */
 :root {
-  --background: 255, 255, 255; /* White */
-  --foreground: 23, 23, 23; /* Black */
+  --background: 246, 235, 221; /* cream #F6EBDD */
+  --foreground: 68, 88, 66; /* forest #445842 */
 }
 
-/* Dark mode color settings */
+/* Dark mode — fondo bosque profundo, texto crema */
 .dark {
-  --background: 10, 10, 10; /* Black */
-  --foreground: 237, 237, 237; /* Greyish white */
+  --background: 46, 61, 44; /* forest-deep ~#2E3D2C */
+  --foreground: 246, 235, 221;
 }
 
 /* Apply dynamic colors */
@@ -69,31 +69,31 @@ body {
 }
 
 .animated-gradient {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #c28359, #e8a2ba, #94b3c5, #5a6e54);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
 
 /* Glassmorphism effect */
 .glass {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(246, 235, 221, 0.45);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(68, 88, 66, 0.12);
 }
 
 .dark .glass {
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(46, 61, 44, 0.55);
+  border: 1px solid rgba(246, 235, 221, 0.12);
 }
 
 /* Glow effect */
 .glow {
-  box-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+  box-shadow: 0 0 20px rgba(194, 131, 89, 0.45);
 }
 
 .glow-hover:hover {
-  box-shadow: 0 0 30px rgba(147, 51, 234, 0.8);
+  box-shadow: 0 0 28px rgba(232, 162, 186, 0.55);
   transition: box-shadow 0.3s ease;
 }
 
@@ -115,11 +115,11 @@ body {
 @keyframes pulse-glow {
   0%, 100% {
     opacity: 1;
-    box-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+    box-shadow: 0 0 20px rgba(194, 131, 89, 0.45);
   }
   50% {
     opacity: 0.8;
-    box-shadow: 0 0 40px rgba(147, 51, 234, 0.8);
+    box-shadow: 0 0 36px rgba(148, 179, 197, 0.5);
   }
 }
 
@@ -129,7 +129,7 @@ body {
 
 /* Text gradient */
 .text-gradient {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #445842 0%, #c28359 45%, #e8a2ba 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

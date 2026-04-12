@@ -37,7 +37,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className="fixed top-0 w-full z-50 bg-transparent text-gray-900 dark:text-white"
+            className="fixed top-0 w-full z-50 bg-transparent text-forest dark:text-cream"
         >
             <div className="container mx-auto flex justify-between items-center p-4">
 
@@ -48,10 +48,10 @@ export default function Navbar() {
 
                 {/* MENÚ - DESKTOP */}
                 <ul className="hidden md:flex space-x-6">
-                    <li><Link href="#About" className="hover:text-purple-600 dark:hover:text-purple-300 transition-colors">{t("nav.about")}</Link></li>
-                    <li><Link href="#Skills" className="hover:text-purple-600 dark:hover:text-purple-300 transition-colors">{t("nav.skills")}</Link></li>
-                    <li><Link href="#Experience" className="hover:text-purple-600 dark:hover:text-purple-300 transition-colors">{t("nav.experience")}</Link></li>
-                    <li><Link href="#Contact" className="hover:text-purple-600 dark:hover:text-purple-300 transition-colors">{t("nav.contact")}</Link></li>
+                    <li><Link href="#About" className="hover:text-clay dark:hover:text-blush transition-colors">{t("nav.about")}</Link></li>
+                    <li><Link href="#Skills" className="hover:text-clay dark:hover:text-blush transition-colors">{t("nav.skills")}</Link></li>
+                    <li><Link href="#Experience" className="hover:text-clay dark:hover:text-blush transition-colors">{t("nav.experience")}</Link></li>
+                    <li><Link href="#Contact" className="hover:text-clay dark:hover:text-blush transition-colors">{t("nav.contact")}</Link></li>
                 </ul>
 
                 {/* LANGUAGE & THEME TOGGLE */}
@@ -65,7 +65,7 @@ export default function Navbar() {
                             }`}
                             title={language === "es" ? "Cambiar idioma" : "Change language"}
                         >
-                            <GlobeAltIcon className="h-5 w-5 text-blue-600 dark:text-blue-400"/>
+                            <GlobeAltIcon className="h-5 w-5 text-forest dark:text-mist"/>
                         </button>
                         {showLanguageMenu && (
                             <div className="absolute right-0 mt-2 w-36 glass backdrop-blur-xl rounded-lg shadow-xl border border-gray-200/50 dark:border-white/20 py-1 z-50 overflow-hidden">
@@ -75,7 +75,7 @@ export default function Navbar() {
                                         setShowLanguageMenu(false);
                                     }}
                                     className={`w-full text-left px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-white/10 transition flex items-center space-x-2 ${
-                                        language === "en" ? "bg-gray-100 dark:bg-white/20 text-blue-600 dark:text-blue-400 font-medium" : "text-gray-900 dark:text-white"
+                                        language === "en" ? "bg-cream-soft/80 dark:bg-white/20 text-forest dark:text-blush font-medium" : "text-forest dark:text-cream"
                                     }`}
                                 >
                                     <span className="text-lg">🇺🇸</span>
@@ -87,7 +87,7 @@ export default function Navbar() {
                                         setShowLanguageMenu(false);
                                     }}
                                     className={`w-full text-left px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-white/10 transition flex items-center space-x-2 ${
-                                        language === "es" ? "bg-gray-100 dark:bg-white/20 text-blue-600 dark:text-blue-400 font-medium" : "text-gray-900 dark:text-white"
+                                        language === "es" ? "bg-cream-soft/80 dark:bg-white/20 text-forest dark:text-blush font-medium" : "text-forest dark:text-cream"
                                     }`}
                                 >
                                     <span className="text-lg">🇪🇸</span>
@@ -104,7 +104,7 @@ export default function Navbar() {
                         className="p-2 rounded-full hover:bg-gray-200/50 dark:hover:bg-white/10 transition"
                         title={language === "es" ? "Ver CV" : "View CV"}
                     >
-                        <DocumentTextIcon className="h-5 w-5 text-blue-600 dark:text-blue-400"/>
+                        <DocumentTextIcon className="h-5 w-5 text-forest dark:text-mist"/>
                     </a>
 
                     {!mounted ? (
@@ -115,7 +115,7 @@ export default function Navbar() {
                                 className={`p-2 rounded-full transition ${resolvedTheme === "system" ? "bg-gray-200/50 dark:bg-white/20" : ""}`}
                                 onClick={() => setTheme("system")}
                             >
-                                <ComputerDesktopIcon className="h-5 w-5 text-gray-700 dark:text-white"/>
+                                <ComputerDesktopIcon className="h-5 w-5 text-forest dark:text-cream"/>
                             </button>
                             <button
                                 className={`p-2 rounded-full transition ${resolvedTheme === "light" ? "bg-gray-200/50 dark:bg-white/20" : ""}`}
@@ -127,13 +127,13 @@ export default function Navbar() {
                                 className={`p-2 rounded-full transition ${resolvedTheme === "dark" ? "bg-gray-200/50 dark:bg-white/20" : ""}`}
                                 onClick={() => setTheme("dark")}
                             >
-                                <MoonIcon className="h-5 w-5 text-gray-700 dark:text-white"/>
+                                <MoonIcon className="h-5 w-5 text-forest dark:text-cream"/>
                             </button>
                         </>
                     )}
                 </div>
 
-                <button className="md:hidden text-gray-900 dark:text-white" onClick={() => setIsOpen(!isOpen)}>
+                <button className="md:hidden text-forest dark:text-cream" onClick={() => setIsOpen(!isOpen)}>
                     ☰
                 </button>
             </div>
@@ -143,10 +143,10 @@ export default function Navbar() {
                     ref={menuRef}
                     className="md:hidden glass backdrop-blur-xl border-t border-gray-200/50 dark:border-white/10 py-4 absolute top-full left-0 w-full flex flex-col items-center"
                 >
-                    <Link href="#About" className="block py-2 hover:text-purple-600 dark:hover:text-purple-300 transition-colors text-gray-900 dark:text-white" onClick={() => setIsOpen(false)}>{t("nav.about")}</Link>
-                    <Link href="#Skills" className="block py-2 hover:text-purple-600 dark:hover:text-purple-300 transition-colors text-gray-900 dark:text-white" onClick={() => setIsOpen(false)}>{t("nav.skills")}</Link>
-                    <Link href="#Experience" className="block py-2 hover:text-purple-600 dark:hover:text-purple-300 transition-colors text-gray-900 dark:text-white" onClick={() => setIsOpen(false)}>{t("nav.experience")}</Link>
-                    <Link href="#Contact" className="block py-2 hover:text-purple-600 dark:hover:text-purple-300 transition-colors text-gray-900 dark:text-white" onClick={() => setIsOpen(false)}>{t("nav.contact")}</Link>
+                    <Link href="#About" className="block py-2 hover:text-clay dark:hover:text-blush transition-colors text-forest dark:text-cream" onClick={() => setIsOpen(false)}>{t("nav.about")}</Link>
+                    <Link href="#Skills" className="block py-2 hover:text-clay dark:hover:text-blush transition-colors text-forest dark:text-cream" onClick={() => setIsOpen(false)}>{t("nav.skills")}</Link>
+                    <Link href="#Experience" className="block py-2 hover:text-clay dark:hover:text-blush transition-colors text-forest dark:text-cream" onClick={() => setIsOpen(false)}>{t("nav.experience")}</Link>
+                    <Link href="#Contact" className="block py-2 hover:text-clay dark:hover:text-blush transition-colors text-forest dark:text-cream" onClick={() => setIsOpen(false)}>{t("nav.contact")}</Link>
                 </div>
             )}
         </nav>

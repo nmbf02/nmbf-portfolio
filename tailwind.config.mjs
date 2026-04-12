@@ -11,6 +11,18 @@ export default {
       colors: {
         background: "rgb(var(--background) / <alpha-value>)",
         foreground: "rgb(var(--foreground) / <alpha-value>)",
+        /** Invitación / boda — verde bosque, crema, rosa polvo, azul apagado, terracota */
+        forest: {
+          DEFAULT: "#445842",
+          deep: "#2E3D2C",
+        },
+        cream: {
+          DEFAULT: "#F6EBDD",
+          soft: "#F4EBDC",
+        },
+        blush: "#E8A2BA",
+        mist: "#94B3C5",
+        clay: "#C28359",
       },
       animation: {
         'blob': 'blob 7s infinite',

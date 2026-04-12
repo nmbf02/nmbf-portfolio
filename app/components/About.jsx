@@ -56,11 +56,11 @@ export default function About() {
     return (
         <section id="About" className="relative w-full py-24 px-8 overflow-hidden">
             {/* Background gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-gray-900"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-cream via-cream-soft to-mist/25 dark:from-forest-deep dark:via-forest dark:to-forest-deep"></div>
             
             {/* Animated shapes */}
-            <div className="absolute top-10 right-10 w-72 h-72 bg-purple-300 dark:bg-purple-800 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-            <div className="absolute bottom-10 left-10 w-72 h-72 bg-pink-300 dark:bg-pink-800 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+            <div className="absolute top-10 right-10 w-72 h-72 bg-blush/80 dark:bg-blush/30 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob"></div>
+            <div className="absolute bottom-10 left-10 w-72 h-72 bg-mist/80 dark:bg-mist/25 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob animation-delay-2000"></div>
             
             <div className="container mx-auto max-w-6xl relative z-10">
                 <motion.div
@@ -73,21 +73,21 @@ export default function About() {
                     {/* Look "periódico antiguo" */}
                     <div className="mx-auto max-w-4xl">
                         <div className="flex items-center justify-center gap-4 mb-6">
-                            <span className="h-px w-16 bg-gray-300/70 dark:bg-white/15" />
-                            <span className="text-xs uppercase tracking-[0.35em] text-gray-600 dark:text-gray-400 font-serif">
+                            <span className="h-px w-16 bg-forest/20 dark:bg-cream/20" />
+                            <span className="text-xs uppercase tracking-[0.35em] text-forest/70 dark:text-cream/70 font-serif">
                                 {t("about.title")}
                             </span>
-                            <span className="h-px w-16 bg-gray-300/70 dark:bg-white/15" />
+                            <span className="h-px w-16 bg-forest/20 dark:bg-cream/20" />
                         </div>
 
                         <p
                             ref={textRef}
-                            className="font-serif text-[1.05rem] md:text-lg text-gray-800 dark:text-gray-200 leading-8 md:leading-9 tracking-wide"
+                            className="font-serif text-[1.05rem] md:text-lg text-forest dark:text-cream leading-8 md:leading-9 tracking-wide"
                         >
                             {typed}
                             {!done && (
                                 <span
-                                    className="typewriter-caret text-gray-800 dark:text-gray-200"
+                                    className="typewriter-caret text-forest dark:text-cream"
                                     aria-hidden="true"
                                 >
                                     |
