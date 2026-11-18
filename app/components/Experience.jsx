@@ -3,6 +3,7 @@ import { useTranslation } from "@/app/hooks/useTranslation";
 import { useEffect } from "react";
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import Magnetic from "@/app/components/Magnetic";
 
 /**
  * Experience section.
@@ -34,9 +35,23 @@ export default function Experience() {
     // Proyectos renderizados en el timeline de Trayectoria
     const projects = [
         {
+            key: "hakamo",
+            image: "/projects/hakamo.jpg",
+            codeLink: "https://hakamo.com.do/",
+            linkText: "visitWebsite",
+            linkIcon: "external",
+        },
+        {
             key: "cjtaxes",
             image: "/projects/cjtaxes.png",
             codeLink: "https://cjtaxes.netlify.app/",
+            linkText: "visitWebsite",
+            linkIcon: "external",
+        },
+        {
+            key: "bibliotecaIsa",
+            image: "/projects/biblioteca-isa.jpg",
+            codeLink: "https://isa.edu.do/biblioteca/",
             linkText: "visitWebsite",
             linkIcon: "external",
         },
@@ -119,13 +134,17 @@ export default function Experience() {
                                             {/* Imagen */}
                                             <div className="relative h-56 md:h-64 overflow-hidden">
                                                 <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-105">
-                                                    <Image
-                                                        src={project.image}
-                                                        alt={t(`projects.items.${project.key}.title`)}
-                                                        fill
-                                                        className="object-cover"
-                                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 60vw"
-                                                    />
+                                                    {project.image ? (
+                                                        <Image
+                                                            src={project.image}
+                                                            alt={t(`projects.items.${project.key}.title`)}
+                                                            fill
+                                                            className="object-cover"
+                                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 60vw"
+                                                        />
+                                                    ) : (
+                                                        <div className="w-full h-full bg-gradient-to-br from-forest via-clay to-blush" />
+                                                    )}
                                                 </div>
                                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent" />
                                                 <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -148,11 +167,12 @@ export default function Experience() {
                                                         </span>
                                                     </div>
                                                 ) : (
-                                                    <a
+                                                    <Magnetic className="inline-block">
+<a
                                                         href={project.codeLink}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-forest via-clay to-blush text-cream rounded-xl font-bold hover:from-clay hover:via-blush hover:to-mist transition-all shadow-lg hover:shadow-xl"
+                                                        className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-forest to-clay text-cream rounded-xl font-bold hover:from-clay hover:to-blush hover:text-forest-deep transition-all shadow-lg hover:shadow-xl"
                                                     >
                                                         {project.linkIcon === "external" ? (
                                                             <FaExternalLinkAlt size={18} className="mr-2" />
@@ -161,6 +181,7 @@ export default function Experience() {
                                                         )}
                                                         {project.linkText ? t(`projects.${project.linkText}`) : t("projects.viewCode")}
                                                     </a>
+</Magnetic>
                                                 )}
                                             </div>
                                         </div>

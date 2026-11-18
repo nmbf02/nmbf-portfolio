@@ -60,7 +60,7 @@ export default function Contact() {
     };
 
     return (
-        <section id="Contact" className="relative py-24 px-8 overflow-hidden">
+        <section id="Contact" className="relative py-16 md:py-24 px-5 sm:px-8 overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-blush/20 via-cream to-mist/20 dark:from-forest-deep dark:via-forest dark:to-forest-deep"></div>
             
@@ -68,19 +68,19 @@ export default function Contact() {
             <div className="absolute top-10 left-10 w-96 h-96 bg-blush/70 dark:bg-blush/25 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob"></div>
             <div className="absolute bottom-10 right-10 w-96 h-96 bg-clay/50 dark:bg-clay/20 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob animation-delay-2000"></div>
 
-            <div className="container mx-auto flex flex-col md:flex-row justify-between items-start relative z-10">
+            <div className="container mx-auto flex flex-col lg:flex-row lg:gap-12 justify-between items-start relative z-10">
                 {/* Texto y opciones de proyecto */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="w-full md:w-1/2 mb-12 md:mb-0"
+                    className="w-full lg:w-1/2 mb-12 lg:mb-0"
                 >
                     <div className="inline-block mb-4 px-4 py-2 glass rounded-full text-sm font-semibold text-clay dark:text-blush">
                         💬 {t("contact.title")}
                     </div>
-                    <h2 className="text-5xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-blush via-clay to-forest bg-clip-text text-transparent">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-blush via-clay to-forest bg-clip-text text-transparent">
                         {t("contact.title")} <br />
                         {t("contact.title2")} <span className="text-clay dark:text-blush">{t("contact.titleHighlight")}</span> {t("contact.title3")}
                     </h2>
@@ -102,7 +102,7 @@ export default function Contact() {
                                 whileTap={{ scale: 0.95 }}
                                 className={`px-4 py-2 rounded-lg glass transition-all duration-300 ${
                                     formData.project_type === type
-                                        ? "bg-gradient-to-r from-clay to-blush text-cream font-semibold glow"
+                                        ? "bg-gradient-to-r from-clay to-blush text-forest-deep font-semibold glow"
                                         : "text-forest/85 dark:text-cream/80 hover:bg-white/25 dark:hover:bg-cream/10"
                                 }`}
                                 onClick={() => handleProjectType(type)}
@@ -119,7 +119,7 @@ export default function Contact() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="w-full md:w-1/2 glass p-8 rounded-2xl backdrop-blur-xl"
+                    className="w-full lg:w-1/2 glass p-5 sm:p-8 rounded-2xl backdrop-blur-xl"
                 >
                     <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
                         <input

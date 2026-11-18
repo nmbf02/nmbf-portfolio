@@ -4,20 +4,20 @@ import { useTranslation } from "@/app/hooks/useTranslation";
 
 const Statistics = () => {
     const { t } = useTranslation();
-    
+
     return (
-        <div className="flex space-x-16 pl-0 md:pl-0">
+        <div className="flex flex-wrap justify-center md:justify-start gap-x-8 gap-y-3 md:gap-x-16">
             {/* Bloque 1 */}
-            <div className="flex items-center text-xl">
-        <span className="text-5xl font-bold text-clay dark:text-blush">
+            <div className="flex items-center text-base md:text-xl">
+        <span className="text-4xl md:text-5xl font-bold text-clay dark:text-blush">
           <CountUp start={0} end={2} duration={2} />
         </span>
                 <p className="ml-3 text-forest/55 dark:text-cream/55">{t("statistics.years")}</p>
             </div>
 
             {/* Bloque 2 */}
-            <div className="flex items-center text-xl">
-        <span className="text-5xl font-bold text-clay dark:text-blush">
+            <div className="flex items-center text-base md:text-xl">
+        <span className="text-4xl md:text-5xl font-bold text-clay dark:text-blush">
           <CountUp start={0} end={29} duration={3} />
         </span>
                 <p className="ml-3 text-forest/55 dark:text-cream/55">{t("statistics.projects")}</p>

@@ -53,6 +53,10 @@
     "visitWebsite": "Visitar Sitio Web",
     "privateProject": "Proyecto Privado - Sin enlaces disponibles",
     "items": {
+      "hakamo": {
+        "title": "Hakamo - Empresa y Empleos",
+        "description": "Plataforma web para empresas y empleos: las empresas publican vacantes y gestionan su perfil, mientras los candidatos exploran ofertas y aplican de forma sencilla."
+      },
       "cjtaxes": {
         "title": "CJ Tax Services",
         "description": "Sitio de marketing y engagement para servicios de preparación de impuestos, hecho con React y Vite. La portada mezcla un estilo editorial tipo periódico con pasos del proceso al hacer scroll, un estimador ilustrativo de reembolso, un término fiscal del día, un quiz breve y textos bilingües."
@@ -60,6 +64,10 @@
       "isa": {
         "title": "Sitio Web Universidad ISA",
         "description": "Sitio web institucional moderno para la Universidad ISA con programas académicos, noticias, vida estudiantil y secciones de investigación. Construido con diseño responsive y experiencia de usuario optimizada."
+      },
+      "bibliotecaIsa": {
+        "title": "Biblioteca Universidad ISA",
+        "description": "Sitio de la biblioteca de la Universidad ISA con recursos y servicios en línea: catálogo, bases de datos académicas, Turnitin, gestores bibliográficos, capacitaciones, novedades de la colección y líneas de lectura. Diseño responsive y fácil de navegar."
       },
       "dominguez": {
         "title": "Sitio Web Dominguez Auto Pintura",

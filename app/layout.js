@@ -7,6 +7,7 @@ import Skills from "@/app/components/Skills";
 import Experience from "@/app/components/Experience";
 import Contact from "@/app/components/Contact";
 import Footer from "@/app/components/Footer";
+import CursorGlow from "@/app/components/CursorGlow";
 import Providers from "./providers";
 
 const geistSans = Geist({
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
         <html lang="en" suppressHydrationWarning>
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Providers>
+            <CursorGlow />
             <Navbar />
             <Hero />
             <About />

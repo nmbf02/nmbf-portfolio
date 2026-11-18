@@ -47,7 +47,7 @@ export default function Skills() {
                     <div className="inline-block mb-4 px-4 py-2 glass rounded-full text-sm font-semibold text-forest dark:text-mist">
                         🛠️ {t("skills.title")}
                     </div>
-                    <h2 className="text-5xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-forest via-mist to-clay bg-clip-text text-transparent">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-forest via-mist to-clay bg-clip-text text-transparent">
                         {t("skills.title")}
                     </h2>
                     <p className="text-lg md:text-xl text-forest/85 dark:text-cream/85">

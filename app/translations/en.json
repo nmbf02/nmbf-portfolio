@@ -53,6 +53,10 @@
     "visitWebsite": "Visit Website",
     "privateProject": "Private Project - No links available",
     "items": {
+      "hakamo": {
+        "title": "Hakamo - Companies & Jobs",
+        "description": "Web platform for companies and jobs: companies post openings and manage their profile, while candidates browse listings and apply easily."
+      },
       "cjtaxes": {
         "title": "CJ Tax Services",
         "description": "Marketing and engagement site for tax preparation services, built with React and Vite. The home page combines a newspaper / editorial visual style with scroll-driven process steps, an illustrative refund estimator, a daily tax term, a short quiz, and bilingual copy."
@@ -60,6 +64,10 @@
       "isa": {
         "title": "Universidad ISA Website",
         "description": "Modern institutional website for Universidad ISA featuring academic programs, news, student life, and research sections. Built with responsive design and optimized user experience."
+      },
+      "bibliotecaIsa": {
+        "title": "Universidad ISA Library",
+        "description": "Universidad ISA library website with online resources and services: catalog, academic databases, Turnitin, reference managers, training workshops, new acquisitions, and reading lines. Responsive and easy to navigate."
       },
       "dominguez": {
         "title": "Dominguez Auto Painting Website",

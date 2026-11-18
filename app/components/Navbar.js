@@ -43,7 +43,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="fixed top-0 w-full z-50 bg-transparent text-forest dark:text-cream">
+            <nav className="fixed top-0 w-full z-50 bg-cream/70 dark:bg-forest-deep/70 backdrop-blur-md text-forest dark:text-cream">
                 <div className="relative container mx-auto flex items-center justify-center p-4 min-h-[3.5rem]">
                     <h1
                         className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-xl font-bold cursor-pointer"

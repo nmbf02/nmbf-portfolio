@@ -11,18 +11,18 @@ export default {
       colors: {
         background: "rgb(var(--background) / <alpha-value>)",
         foreground: "rgb(var(--foreground) / <alpha-value>)",
-        /** Invitación / boda — verde bosque, crema, rosa polvo, azul apagado, terracota */
+        /** Paleta de azules — azul profundo (forest), blanco azulado (cream), celeste (blush), cian (mist), azul brillante (clay) */
         forest: {
-          DEFAULT: "#445842",
-          deep: "#2E3D2C",
+          DEFAULT: "#1D3F72",
+          deep: "#0F2447",
         },
         cream: {
-          DEFAULT: "#F6EBDD",
-          soft: "#F4EBDC",
+          DEFAULT: "#FFFFFF",
+          soft: "#F1F5FB",
         },
-        blush: "#E8A2BA",
-        mist: "#94B3C5",
-        clay: "#C28359",
+        blush: "#9CC4F2",
+        mist: "#7FD3E8",
+        clay: "#2F7DE1",
       },
       animation: {
         'blob': 'blob 7s infinite',
